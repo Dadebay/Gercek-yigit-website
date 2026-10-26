@@ -2,6 +2,23 @@
 
 Multilingual (EN / RU / TKM) corporate website for **Gerçek Ýigit**, covering textile, construction and machinery services, projects, news, gallery, certificates and catalogues. It includes an admin panel for managing content.
 
+## Gallery
+
+<p align="center">
+  <img src="img/generated/textile-hero.webp" width="49%" alt="Textile production">
+  <img src="img/generated/sector-construction.webp" width="49%" alt="Construction sector">
+</p>
+<p align="center">
+  <img src="img/generated/sector-machinery.webp" width="49%" alt="Machinery sector">
+  <img src="img/generated/sector-socks.webp" width="49%" alt="Socks production">
+</p>
+<p align="center">
+  <img src="img/generated/textile-quality.webp" width="49%" alt="Textile quality control">
+  <img src="img/generated/project-site.webp" width="49%" alt="Construction project site">
+</p>
+
+*Images are representative AI-generated content.*
+
 ## Tech stack
 
 - PHP 8+ (PDO, `mbstring`, `fileinfo`, OpenSSL)
