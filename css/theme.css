@@ -1,0 +1,106 @@
+/* One palette for every public page. Photography keeps its original colors. */
+:root {
+ color-scheme:light;
+ --h-ink:#20251f; --h-paper:#f2f1e9; --h-muted:#65695e; --h-line:rgba(32,37,31,.18);
+ --h-accent:#d9e2b4; --h-accent-ink:#20251f; --h-surface:#e6e7dd; --h-raised:#e8eadf;
+ --h-image-mat:#dcddd2; --h-product-mat:#eff0e8; --h-document-mat:#e8e8dd; --h-viewer-mat:#e2e4d8;
+ --h-nav-surface:rgba(242,241,233,.97); --h-logo-filter:grayscale(1) brightness(.35);
+ --h-hover:#e3e6d7; --h-button-hover:#e7eccf; --h-link-hover:#50652e; --h-focus:#657b3d;
+ --h-field-line:#78846e; --h-article:#4e554b; --h-cta:#d9e2b4; --h-cta-ink:#20251f;
+ --h-notice:#e6e9da; --h-notice-border:#718346; --h-error:#f0e2d7; --h-error-border:#9b6345;
+ --h-footer:#1b241f; --h-scroll-thumb:#8c9878;
+ --ease-out:cubic-bezier(.23,1,.32,1);
+ background:var(--h-paper);
+ scrollbar-color:var(--h-scroll-thumb) var(--h-paper);
+}
+:root[data-theme="dark"] {
+ color-scheme:dark;
+ --h-ink:#edf0e5; --h-paper:#151e19; --h-muted:#b2bdae; --h-line:rgba(215,229,199,.2);
+ --h-accent:#d0dfac; --h-surface:#1d2921; --h-raised:#243228;
+ --h-image-mat:#2b372e; --h-product-mat:#29352d; --h-document-mat:#303b31; --h-viewer-mat:#202b24;
+ --h-nav-surface:rgba(21,30,25,.97); --h-logo-filter:grayscale(1) brightness(0) invert(1);
+ --h-hover:#2d3d30; --h-button-hover:#304233; --h-link-hover:#d0dfac; --h-focus:#d0dfac;
+ --h-field-line:#7e9077; --h-article:#c5cfc0; --h-cta:#293c2d; --h-cta-ink:#edf0e5;
+ --h-notice:#2c3d28; --h-notice-border:#b5ce89; --h-error:#402c26; --h-error-border:#e1a184;
+ --h-footer:#101813; --h-scroll-thumb:#687b5e;
+}
+.editorial-home ::selection { color:var(--h-accent-ink); background:var(--h-accent); }
+.editorial-home :focus-visible { outline-color:var(--h-focus); }
+.h-nav.is-scrolled,.editorial-inner .h-nav { background:var(--h-nav-surface); }
+.h-nav.is-scrolled .h-brand img,.editorial-inner .h-brand img { filter:var(--h-logo-filter); }
+.h-popover a:hover,.h-popover a[aria-current] { background:var(--h-hover); }
+.h-nav-links > a[aria-current]::after { transform:scaleX(1); }
+.h-button-light { color:var(--h-accent-ink)!important; }
+.h-button-arrow { border-left-color:var(--h-line); }
+.h-button-light .h-button-arrow { border-left-color:#20251f26; }
+.h-expertise,.p-collection,.p-values-band { background:var(--h-surface); }
+.h-sector-number,.h-sector h3,.h-sector p,.h-sector-arrow,.h-values .h-eyebrow { color:var(--h-muted); }
+.h-sector.is-active h3,.h-sector.is-active .h-sector-arrow { color:var(--h-ink); }
+.h-news-image,.p-photo,.p-story-photo { background:var(--h-image-mat); }
+.p-product-grid .p-photo { background:var(--h-product-mat); }
+.p-certificate-grid .p-photo { background:var(--h-document-mat); }
+.p-viewer-stage { background:var(--h-viewer-mat); }
+.h-contact,.p-cta { background:var(--h-cta); color:var(--h-cta-ink); }
+.h-contact-bottom { border-top-color:var(--h-line); }
+.h-footer { background:var(--h-footer); }
+.p-article-body { color:var(--h-article); }
+.p-download-num { color:var(--h-muted); }
+.p-contact-form { background:var(--h-raised); border-radius:22px; }
+.p-field input,.p-field textarea,.p-field select,.p-search input { border-bottom-color:var(--h-field-line); caret-color:var(--h-focus); }
+.p-field input:focus,.p-field textarea:focus,.p-field select:focus,.p-search input:focus { border-bottom-color:var(--h-focus); }
+.p-field input::placeholder,.p-field textarea::placeholder,.p-search input::placeholder { color:var(--h-muted); opacity:1; }
+.p-field select option { color:var(--h-ink); background:var(--h-raised); }
+.p-field input:autofill { box-shadow:0 0 0 100px var(--h-raised) inset; -webkit-text-fill-color:var(--h-ink); }
+.p-notice { background:var(--h-notice); border-left-color:var(--h-notice-border); color:var(--h-ink); }
+.p-notice-error { background:var(--h-error); border-left-color:var(--h-error-border); }
+.p-location .h-shell { color:#f2f1e9; }
+.p-filters button { color:var(--h-ink); }
+.p-filters button[aria-pressed="true"] { background:var(--h-ink); color:var(--h-paper); }
+.h-nav-actions { --h-control-size:44px; --h-control-border:color-mix(in srgb,currentColor 50%,transparent); gap:10px; flex-shrink:0; }
+.h-nav .h-nav-actions > :is(.h-nav-icon-button,.h-nav-contact,.site-language-switch) { height:var(--h-control-size); border:1px solid var(--h-control-border); border-radius:var(--site-button-radius); }
+.h-nav-icon { display:block; width:20px; height:20px; flex-shrink:0; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
+.h-nav-icon-button { display:grid; place-items:center; width:var(--h-control-size); padding:0; flex-shrink:0; color:inherit; background:transparent; cursor:pointer; transition:background-color 180ms ease,border-color 180ms ease,transform 160ms var(--ease-out); }
+.h-nav-icon-button[hidden] { display:none; }
+.h-nav-icon-button:active { transform:scale(.97); }
+.h-nav .h-nav-contact { padding:0 16px; gap:18px; line-height:1; white-space:nowrap; }
+.h-nav-actions .site-language-switch { padding:4px; gap:2px; }
+.h-nav-actions .site-language-switch a { display:grid; place-items:center; height:34px; min-width:30px; padding:0 8px; border-radius:9px; }
+.h-nav-actions :focus-visible { outline:2px solid var(--h-focus); outline-offset:3px; }
+.h-popover a { align-items:center; }
+.h-dropdown[open] .h-nav-chevron { transform:rotate(180deg); }
+.h-theme-toggle { position:relative; }
+.h-theme-toggle svg { position:absolute; transition:transform 200ms var(--ease-out),opacity 200ms ease; pointer-events:none; }
+.h-theme-sun { opacity:0; transform:rotate(-70deg) scale(.9); }
+.h-theme-moon { opacity:1; transform:rotate(0) scale(1); }
+[data-theme="dark"] .h-theme-sun { opacity:1; transform:rotate(0) scale(1); }
+[data-theme="dark"] .h-theme-moon { opacity:0; transform:rotate(70deg) scale(.9); }
+.theme-instant .h-theme-toggle svg { transition:none; }
+/* Older browsers fade the painted surfaces; no layout or content is moved. */
+.theme-color-fade :is(.editorial-home,.h-nav,.h-popover,.h-expertise,.p-collection,.p-values-band,.h-contact,.p-cta,.h-footer,.p-contact-form,.p-viewer,.p-viewer-stage,.p-photo,.p-story-photo,.h-news-image,.p-notice,.p-lead,.h-body-copy,.p-article-body) {
+ transition:background-color 200ms ease,color 200ms ease,border-color 200ms ease;
+}
+/* A short crossfade connects the two states without moving the page content. */
+::view-transition { pointer-events:none; }
+::view-transition-group(root) { animation-duration:200ms; animation-timing-function:cubic-bezier(.23,1,.32,1); }
+::view-transition-old(root),::view-transition-new(root) { animation-duration:200ms; animation-timing-function:cubic-bezier(.23,1,.32,1); }
+@media (hover:hover) and (pointer:fine) {
+ .h-nav-icon-button:hover { background:#ffffff14; }
+ .h-nav .h-nav-actions > .h-nav-icon-button:hover { border-color:currentColor; }
+ .editorial-inner .h-nav-icon-button:hover,.h-nav.is-scrolled .h-nav-icon-button:hover { background:var(--h-hover); }
+ .h-nav-contact:hover { background:var(--h-accent); color:var(--h-accent-ink); }
+ .h-button:hover { background:var(--h-button-hover); }
+ .h-button-light:hover { background:#e7eccf; }
+ .p-form-submit:hover { background:var(--h-accent); color:var(--h-accent-ink); border-color:var(--h-accent); }
+ .p-form-submit:hover .h-button-arrow { border-left-color:#20251f26; }
+ .h-contact-circle:hover { background:var(--h-ink); color:var(--h-paper); }
+ .p-other-sectors a:hover h3,.p-result:hover,.p-section-nav a:hover { color:var(--h-link-hover); }
+ .p-filters button:not([aria-pressed="true"]):hover { background:var(--h-hover); }
+}
+@media (max-width:900px) {
+ .h-nav-icon-button.h-search-link { display:none; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .h-nav-icon-button,.h-theme-toggle svg { transition:none; }
+ .theme-color-fade :is(.editorial-home,.h-nav,.h-popover,.h-expertise,.p-collection,.p-values-band,.h-contact,.p-cta,.h-footer,.p-contact-form,.p-viewer,.p-viewer-stage,.p-photo,.p-story-photo,.h-news-image,.p-notice,.p-lead,.h-body-copy,.p-article-body) { transition:none; }
+ ::view-transition-group(root),::view-transition-old(root),::view-transition-new(root) { animation:none; }
+}

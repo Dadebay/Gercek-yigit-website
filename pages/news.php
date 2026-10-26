@@ -1,0 +1,6 @@
+<?php $news=records('SELECT * FROM posts ORDER BY date DESC,id DESC');page_intro(ui('journal_title'),t('news'),ui('journal_desc')); ?>
+<section class="h-shell p-news-list">
+<?php foreach($news as $i=>$post): $images=media_list($post['images'] ?? ''); ?>
+ <article class="p-story<?= $i===0?' p-story-featured':'' ?> h-reveal"><a class="p-story-photo" href="index.php?page=news_detail&amp;id=<?= (int)$post['id'] ?>"><img src="<?= e(site_media_url($images[0] ?? '','img/generated/sector-textile.webp')) ?>" alt="<?= e(loc($post,'title')) ?>" loading="<?= $i===0?'eager':'lazy' ?>"><span class="p-photo-open" aria-hidden="true">↗</span></a><div class="p-story-copy"><div class="h-news-meta"><span><?= e(t('news')) ?></span><time><?= e(date('d.m.Y',strtotime($post['date']))) ?></time></div><h2><a href="index.php?page=news_detail&amp;id=<?= (int)$post['id'] ?>"><?= e(loc($post,'title')) ?></a></h2><p><?= e(preview_text(loc($post,'short_description'),220)) ?></p><a class="h-text-link" href="index.php?page=news_detail&amp;id=<?= (int)$post['id'] ?>"><?= e(t('read_more')) ?> <span aria-hidden="true">↗</span></a></div></article>
+<?php endforeach; if(!$news): ?><p class="p-notice"><?= e(t('no_news')) ?></p><?php endif; ?></section>
+<?php page_cta(); ?>

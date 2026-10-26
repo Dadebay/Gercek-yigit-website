@@ -1,0 +1,23 @@
+{
+  "created": "2026-10-14",
+  "provider": "Google Gemini",
+  "purpose": "AI-generated illustrative sector films for the homepage; not documentary footage of owned equipment or completed contracts.",
+  "construction": {
+    "prompt": "Create a NEW 10-second photorealistic cinematic film, horizontal 16:9, for the CONSTRUCTION section of the same Gerçek Ýigit website. This must be entirely about CIVIL CONSTRUCTION IN TURKMENISTAN, with no textiles. It is an illustrative company capability film, not a recording of an actual named project. Show the kinds of work in our portfolio: structural steel assembly, careful granite paving, and finished architectural construction. A refined three-shot sequence with slow restrained camera movement: 0–4 seconds, a mobile crane carefully positions a white structural steel beam beside an elegant cream-stone civic building under construction near Ashgabat, workers in proper helmets and reflective vests guide from a safe distance; 4–7 seconds, close documentary view of a skilled worker’s gloved hands checking a granite paving slab with a short spirit level and rubber mallet, natural anatomically correct hands; 7–10 seconds, slow reveal of a completed elegant white steel entrance canopy and clean granite forecourt against pale Kopetdag foothills. Realistic construction geometry, connected lifting rigging, physically plausible scale, meticulous material detail. Match our premium website palette: warm limestone, muted sage, deep forest graphite shadows, restrained industrial yellow, soft natural morning light. Clean editorial cinematography, calm pacing, soft straight cuts, no rapid montage. Keep the main action near the centre-right with some quiet space to the left for website copy. No logos, no writing, no titles, no captions, no watermark added by you, no music, no dialogue. Generate the actual video now.",
+    "sourceConversation": "https://gemini.google.com/app/7003ceca8935b87f?hl=tr",
+    "output": "construction-work.mp4",
+    "originalDownload": "gemini_generated_video_a6d86e78.mp4",
+    "durationSeconds": 10.0,
+    "encoding": "H.264, 1280x720, 24 fps, silent, CRF 21, faststart",
+    "bytes": 2353718
+  },
+  "machinery": {
+    "prompt": "Generate a 10-second premium photorealistic cinematic video, horizontal 16:9, for the CONSTRUCTION MACHINERY fleet section of the Gerçek Ýigit company website in Turkmenistan. This is an illustrative film of the machinery types we offer, not documentary proof of ownership. Show these FOUR clearly distinct types: yellow tracked hydraulic excavator, white three-axle tipper truck, white truck-mounted mobile crane, and yellow backhoe loader. Refined three-shot sequence with calm camera movement: 0–4 seconds a complete tracked excavator loads a modest amount of earth into a white tipper truck at a safe distance on a broad terraced construction site; 4–7 seconds a slow lateral dolly past a parked white mobile crane with its boom retracted and outriggers stowed, and a clean yellow backhoe loader with its front bucket lowered, all equipment correctly formed and completely visible; 7–10 seconds a closer three-quarter view of the backhoe loader and excavator in an orderly fleet yard as one helmeted Central Asian operator walks naturally beside the parked machines. Dry sandy ground, pale limestone Kopetdag foothills near Ashgabat, quiet cream industrial buildings. Machinery with mechanically correct wheels, continuous crawler tracks, connected booms, realistic hydraulic cylinders, natural mild dust and wear, no distorted or duplicated equipment. A consistent sophisticated palette of warm limestone, muted sage, deep forest graphite shadows and restrained industrial yellow. Soft natural morning light, real documentary texture, smooth deliberate camera moves and clean cuts. Keep the centre-left calm enough for white website text. No textiles. No branding, no titles, no subtitles, no legible signage, no watermark added by you, no music or dialogue. Generate the actual video now.",
+    "output": "construction-machinery.mp4",
+    "sourceConversation": "https://gemini.google.com/app/3b291b8112d46582?hl=tr",
+    "originalDownload": "gemini_generated_video_05076bc8.mp4",
+    "durationSeconds": 10.0,
+    "encoding": "H.264, 1280x720, 24 fps, silent, CRF 21, faststart",
+    "bytes": 3627980
+  }
+}

@@ -1,0 +1,6 @@
+<?php $post=records('SELECT * FROM posts WHERE id=? LIMIT 1',[(int)($_GET['id'] ?? 0)])[0] ?? null;
+if(!$post){page_intro(t('news_not_found'),t('news'));return;}
+$images=media_list($post['images'] ?? '');
+?>
+<article class="p-article h-shell"><a class="h-text-link" href="index.php?page=news"><?= e(ui('back_news')) ?> <span>↖</span></a><div class="h-news-meta"><span><?= e(t('news')) ?> / GERÇEK ÝIGIT</span><time><?= e(date('d.m.Y',strtotime($post['date']))) ?></time></div><h1><?= e(loc($post,'title')) ?></h1><p class="p-article-intro"><?= e(loc($post,'short_description')) ?></p><?php if($images): ?><figure class="p-article-cover"><a href="<?= e(site_media_url($images[0])) ?>" data-viewer data-title="<?= e(loc($post,'title')) ?>"><img src="<?= e(site_media_url($images[0])) ?>" alt="<?= e(loc($post,'title')) ?>" fetchpriority="high"></a></figure><?php endif; ?><div class="p-article-body"><?= nl2br(e(loc($post,'description'))) ?></div><?php if(count($images)>1): ?><div class="p-article-gallery"><?php media_cards(array_map(fn($src)=>['src'=>site_media_url($src),'title'=>loc($post,'title')],array_slice($images,1))); ?></div><?php endif; ?><a class="h-text-link" href="index.php?page=news"><?= e(ui('back_news')) ?><span>↖</span></a></article>
+<?php page_cta(); ?>

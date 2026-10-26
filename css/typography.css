@@ -1,0 +1,27 @@
+/* Gilroy is self-hosted so all three languages use the same type family. */
+@font-face { font-family:Gilroy; font-style:normal; font-weight:300; font-display:swap; src:url('fonts/gilroy/Gilroy-Light.ttf') format('truetype'); }
+@font-face { font-family:Gilroy; font-style:normal; font-weight:400; font-display:swap; src:url('fonts/gilroy/Gilroy-Regular.ttf') format('truetype'); }
+@font-face { font-family:Gilroy; font-style:normal; font-weight:500; font-display:swap; src:url('fonts/gilroy/Gilroy-Medium.ttf') format('truetype'); }
+@font-face { font-family:Gilroy; font-style:normal; font-weight:600; font-display:swap; src:url('fonts/gilroy/Gilroy-Semibold.ttf') format('truetype'); }
+@font-face { font-family:Gilroy; font-style:normal; font-weight:700; font-display:swap; src:url('fonts/gilroy/Gilroy-Bold.ttf') format('truetype'); }
+@font-face { font-family:Gilroy; font-style:normal; font-weight:800; font-display:swap; src:url('fonts/gilroy/Gilroy-Extrabold.ttf') format('truetype'); }
+@font-face { font-family:Gilroy; font-style:normal; font-weight:900; font-display:swap; src:url('fonts/gilroy/Gilroy-Black.ttf') format('truetype'); }
+@font-face { font-family:Gilroy; font-style:italic; font-weight:400; font-display:swap; src:url('fonts/gilroy/Gilroy-RegularItalic.ttf') format('truetype'); }
+:root { --site-font:'Gilroy',Arial,sans-serif; --bs-font-sans-serif:var(--site-font); --site-button-radius:14px; }
+body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.display-1,.display-2,.display-3,.display-4,.display-5,.display-6,button,input,textarea,select,.btn { font-family:var(--site-font); }
+.editorial-home,.editorial-home h1,.editorial-home h2,.editorial-home h3,.editorial-home h4,.editorial-home em { font-family:var(--site-font); }
+.editorial-home em { letter-spacing:-.045em; }
+.btn,button:not(.h-film-toggle),input[type=submit],.h-button,.h-nav-contact { border-radius:var(--site-button-radius); }
+.navbar .navbar-nav .contact-nav-link { border-radius:var(--site-button-radius); }
+.btn.btn-square,.btn.btn-sm-square,.btn.btn-md-square,.btn.btn-lg-square { border-radius:50%; }
+.h-news-arrow { border-radius:50%; }
+.h-popover { border-radius:14px; }
+.h-popover a { border-radius:8px; }
+.site-language-switch { display:inline-flex; align-items:center; gap:2px; padding:3px; border:1px solid currentColor; border-radius:999px; white-space:nowrap; }
+.site-language-switch a { display:block; padding:6px 8px; min-width:29px; text-align:center; border-radius:999px; color:inherit; font-family:var(--site-font); font-size:10px; font-weight:600; line-height:1.2; text-decoration:none; transition:background-color 180ms ease,color 180ms ease; }
+.site-language-switch a[aria-current=true] { color:#20251f; background:#d9e2b4; }
+.site-language-switch a:hover { color:#20251f; background:#e7eccf; }
+.header-top .site-language-switch { color:#262a32; border-color:#d6d2c6; }
+.header-top .site-language-switch a { font-size:11px; }
+.h-nav-links { gap:22px; }
+.h-nav-actions { gap:16px; }

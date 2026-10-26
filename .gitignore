@@ -1,0 +1,16 @@
+.DS_Store
+# logs
+error_log
+error_log.txt
+admin/error_log
+# local symlink
+phpmyadmin
+# secrets / backups / dumps
+*.sql
+*.sql.gz
+*.orig
+*.key
+*.pem
+.env
+# user-uploaded CMS content (deploy separately)
+admin/uploads/
